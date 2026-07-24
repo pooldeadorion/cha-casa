@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Casa Nova - Lucas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="house-icon">🏠</div>
+            <h1>Chá de Casa Nova</h1>
+            <p class="subtitle">Lucas • Nova Jornada</p>
+        </div>
+
+        <div class="event-details">
+            <div class="detail-item">
+                <div class="detail-icon">📅</div>
+                <div class="detail-label">Data</div>
+                <div class="detail-value">23 de Agosto de 2026</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon">🕒</div>
+                <div class="detail-label">Horário</div>
+                <div class="detail-value">15:00 às 19:00</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon">📍</div>
+                <div class="detail-label">Local</div>
+                <div class="detail-value">Rua das Acácias, 123<br>Bairro Jardim Florido</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon">🎁</div>
+                <div class="detail-label">Sugestão</div>
+                <div class="detail-value">Itens do checklist abaixo</div>
+            </div>
+        </div>
+
+        <div class="checklist-section">
+            <div class="checklist-title">📋 Checklist de Presentes</div>
+            <div class="reservation-info">
+                🔒 <strong>Sistema em Tempo Real:</strong> Clique em um item disponível para reservá-lo. Ele ficará bloqueado em tempo real para os demais convidados!
+            </div>
+            
+            <div class="category">
+                <div class="category-title">🍳 Cozinha & Eletros</div>
+                <div class="item-list" id="kitchen-items"></div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">🧹 Limpeza & Organização</div>
+                <div class="item-list" id="cleaning-items"></div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">🚿 Banheiro</div>
+                <div class="item-list" id="bathroom-items"></div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">🛏️ Quarto</div>
+                <div class="item-list" id="bedroom-items"></div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">🛋️ Sala</div>
+                <div class="item-list" id="living-room-items"></div>
+            </div>
+        </div>
+
+        <!-- Modal para preencher nome na reserva -->
+        <div class="modal" id="reserveModal">
+            <div class="modal-content">
+                <div class="modal-title">🔒 Reservar Item</div>
+                <p>Você está reservando: <strong id="modalItemName" style="color: #38bdf8;"></strong></p>
+                <input type="text" id="reserverName" placeholder="Seu nome completo" required>
+                <div class="modal-buttons">
+                    <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+                    <button class="btn-confirm" onclick="confirmReservation()">Confirmar Reserva</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🎈 Aguardamos você para celebrar este novo capítulo! 🎈</p>
+        </div>
+    </div>
+
+    <!-- Módulos do Firebase -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
